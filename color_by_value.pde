@@ -89,6 +89,6 @@ void mouseClicked(){
 
 void keyPressed(){
   if(key == 's' || key == 'S'){
-    save("colored.tif");
+    output.save("colored.tif");
   }
 }
