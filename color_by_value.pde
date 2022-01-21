@@ -5,7 +5,7 @@
 PImage input;
 int w, h;
 PImage output;
-float treshold;
+float threshold;
 float tune = 0;
 boolean pressed = false;
 int[] grads = {0,64,192,255};  //setting gradations (the same number as palette elements)
@@ -55,10 +55,10 @@ void applyColors(float tIn, float tuned){
       float bright = brightness(col);
       
       for(int i = 0; i < grads.length; i++){
-        float tresholdFactor = abs(bright - grads[i]);
-        treshold = tIn;  //keep treshold variable up to date with mouse movements
-        if(tresholdFactor < treshold){
-          treshold = tresholdFactor;
+        float thresholdFactor = abs(bright - grads[i]);
+        threshold = tIn;  //keep threshold variable up to date with mouse movements
+        if(thresholdFactor < threshold){
+          threshold = thresholdFactor;
           int memo = i;  //store the case
           
           //Apply changes
